@@ -13,7 +13,6 @@ class Game(object):
     """Defining states, rewards, portfolio positions here"""
     pass
 
-
 class AgentConfig(object):
     """Set Agent parameters here"""
 
