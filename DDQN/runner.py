@@ -12,7 +12,6 @@ from DDQN.environment import get_config
 tf.set_random_seed(123)
 random.seed(123)
 
-
 class Runner(object):
     """Runner object for main run function"""
 
