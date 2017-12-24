@@ -5,7 +5,6 @@ from DDQN.abc import History
 from DDQN.memories import ReplayMemory
 from DDQN.brain import TFBrain
 
-
 class Agent(object):
     def __init__(self, config, sess, load, step_op):
         self.config = config
