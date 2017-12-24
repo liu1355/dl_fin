@@ -6,7 +6,6 @@ import tensorflow as tf
 from DDQN.abc import Brain
 from DDQN.abc import ModelSaver
 
-
 class TFBrain(Brain, ModelSaver):
     """Function 1: Model saver loadable from disk, prediction and target networks, optimizer
        Function 2: Network topology

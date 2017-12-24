@@ -33,6 +33,24 @@ class Memory(object):
 
         return self.i
 
+import numpy as np
+
+class History:
+    """ABC for history"""
+
+    def __init__(self, config):
+        self.history = np.zeros([config.history_length, config.input_size], dtype=np.int32)
+
+    def add(self, state):
+        self.history[:-1] = self.history[1:]
+        self.history[-1] = state
+
+    def reset(self):
+        self.history *= 0
+
+    def get(self):
+        return self.history
+
 def class_vars(obj):
     return {k: v for k, v in inspect.getmembers(obj)
             if not k.startswith('__') and not callable(k)}
