@@ -45,7 +45,7 @@ class AgentConfig(object):
 class EnvironmentConfig(object):
     """Set Game parameters here"""
 
-    env_name = 'TradingGame'
+    env_name = 'Game'
     num_hidden = 5
     action_size = 3
     max_reward = 16.
