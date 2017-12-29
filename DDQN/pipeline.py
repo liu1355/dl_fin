@@ -150,7 +150,7 @@ def Data_Pull_TVF():
 
     return Data_Pipe_TVF
 
-class TVF:
+class TVF(object):
     """Traditional Value Factor
     Function 1: init
     Function 2: Dataframe Standardization
@@ -211,7 +211,7 @@ def Data_Pull_FFM():
 
 today = datetime.datetime.today()
 
-class FFM:
+class FFM(object):
     """Fundamental Factor Model
     Function 1: init
     Function 2: Factor Model group results
@@ -316,11 +316,11 @@ class FFM:
                                'Lag_Ret_z': Lag_Ret_z,
                                'Constant': 1}).dropna()
 
-class AlphaFactors:
+class AlphaFactors(object):
     """WIP: Other alpha factors, e.g. AlphaLens"""
     pass
 
-class EconomicData:
+class EconomicData(object):
     """WIP: Merge date not yet optimized"""
     FRED_df = pd.read_csv('path/merge.csv')
 
