@@ -300,11 +300,11 @@ class FFM:
         PB_z = (PB - PB.mean()) / PB.std()
         PB_z.dropna(inplace = True)
 
-        MC = scipy.stats.mstats.winsorize(self.data_pull_results['market_cap'][date], limits=0.01)
+        MC = scipy.stats.mstats.winsorize(self.data_pull_results['market_cap'][date], limits = 0.01)
         MC_z = (MC - np.mean(MC)) / np.std(MC)
         MC_z.dropna(inplace = True)
 
-        Lag_Ret = scipy.stats.mstats.winsorize(self.data_pull_results['momentum'][date], limits=0.01)
+        Lag_Ret = scipy.stats.mstats.winsorize(self.data_pull_results['momentum'][date], limits = 0.01)
         Lag_Ret_z = (Lag_Ret - np.mean(Lag_Ret)) / np.std(Lag_Ret)
         Lag_Ret_z.dropna(inplace = True
 
