@@ -29,7 +29,7 @@ class TFBrain(Brain, ModelSaver):
 
         # Training network
         with tf.variable_scope('prediction'):
-            self._createNet('p') # Abstract attribute reference
+            self._createNet('p')
 
             # Argmax of Q values denote best action
             self.q_action = tf.argmax(self.q['p'], dimension = 1)

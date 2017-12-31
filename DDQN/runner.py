@@ -24,7 +24,7 @@ def main(args):
         config = get_config(args)
         saveloc = os.getcwd()
 
-        w = TradingGame(config, args.maxgamelen, args.random, saveloc)
+        w = Game(config, args.maxgamelen, args.random, saveloc)
 
         runner = Runner(w, config, saveloc, args.load, sess)
 

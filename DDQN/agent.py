@@ -71,7 +71,7 @@ class Agent(object):
         return self.brain.train(s_t, target_q_t, action, step)
 
     def inject_summary(self, tag_dict, step):
-        self.brain.inject_summary(tag_dict, step) # Abstract attribute reference
+        self.brain.inject_summary(tag_dict, step)
 
     def save_model(self, step = None):
         self.brain.save_model(step)
